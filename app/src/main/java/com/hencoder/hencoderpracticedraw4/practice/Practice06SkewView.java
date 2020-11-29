@@ -38,7 +38,12 @@ public class Practice06SkewView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        canvas.save();
+        canvas.skew(0f, 0.4f);
         canvas.drawBitmap(bitmap, point1.x, point1.y, paint);
+        canvas.restore();
+
+        canvas.skew(-0.4f, 0f);
         canvas.drawBitmap(bitmap, point2.x, point2.y, paint);
     }
 }
